@@ -1,11 +1,7 @@
 // Copyright 2022 NNTU-CS
-#include <iostream>
-
 #include <cmath>
 #include <cstdint>
-
 using namespace std;
-
 bool checkPrime(uint64_t value){
     for( uint64_t i = 2; i <= sqrt(value); i++){
         if (value % i == 0)
@@ -24,18 +20,15 @@ uint64_t nPrime(uint64_t n) {
         }
         value++;
     }
-
     return value - 1;
     }
-
-uint64_t nextPrime(uint64_t value) { //нахождение ближайшего следующего простого числа к value.
+    uint64_t nextPrime(uint64_t value) {
     while (true) {
         if (checkPrime(value)) return value;
         value++;
     }
 }
-
-uint64_t sumPrime(uint64_t hbound) { //сумма всех чисел до hbound (не включая его)
+uint64_t sumPrime(uint64_t hbound) {
 int s = 0;
     for (int i = 1; i <= hbound; i++) {
         s += i;
