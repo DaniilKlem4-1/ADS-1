@@ -28,6 +28,7 @@ uint64_t nPrime(uint64_t n) {
         value++;
     }
 }
+
 uint64_t sumPrime(uint64_t hbound) {
 int s = 0;
     for (int i = 1; i <= hbound; i++) {
